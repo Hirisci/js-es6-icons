@@ -88,9 +88,10 @@ main{
 .grid{
     padding: var(--gutter-xl);
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat( auto-fit, minmax(190px, 1fr) );
     gap: var(--gutter-xxl);
 }
+
 
 .box-icon{
     padding: var(--gutter-xl);
@@ -109,3 +110,5 @@ main{
 .box-icon i {
     font-size: 2.5rem;
 }
+
+
