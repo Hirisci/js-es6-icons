@@ -117,11 +117,6 @@ const containerHTMl = document.querySelector(".container.grid");
 const boxIcon = document.querySelector("#boxIcon").content;
 const select = document.querySelector("#type");
 
-const iconsAnimal = icons.filter((word => word.type ==="animal"));
-const iconsVegetable = icons.filter((word => word.type ==="vegetable"))
-const iconsUser = icons.filter((word => word.type ==="user"))
-
-
 function printIconBox(where, ogg){
 	let box = boxIcon.cloneNode(true);
 	box.querySelector("i").classList.add(ogg.family, ogg.prefix + ogg.name, ogg.color)
@@ -137,23 +132,10 @@ printListIcon(containerHTMl, icons)
 
 select.addEventListener("change", 
 	function (){
-		console.log(this.value);
-
-		switch (this.value) {
-			case "animal":
-				containerHTMl.innerHTML = "";
-				printListIcon(containerHTMl, iconsAnimal);
-				break;
-			case "vegetable":
-				containerHTMl.innerHTML = "";
-				printListIcon(containerHTMl, iconsVegetable);
-				break;
-			case "user":
-				console.log(iconsUser)
-				printListIcon(containerHTMl, iconsUser);
-			break;
-			default:
-				printListIcon(containerHTMl, icons);
-			break;
+		containerHTMl.innerHTML = "";
+		if(this.value!=="icons"){
+			printListIcon(containerHTMl,icons.filter((word => word.type ===this.value)))
+		} else{
+			printListIcon(containerHTMl, icons);
 		}
 })
