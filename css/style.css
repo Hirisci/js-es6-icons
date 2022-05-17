@@ -1,0 +1,111 @@
+/*╔═══════════════╗
+      VARIABILI
+  ╚═══════════════╝*/
+
+ :root{
+    /*- COLORI PRIMARIO -*/
+    --clr-primary-0: orange;
+    --clr-secondary-0: green;
+    --clr-third-0: blue;
+    --clr-txt-0: rgb(40, 176, 220);
+
+    /*-COLORI BG -*/
+    --clr-bg-0: rgb(40, 176, 220);
+    --clr-bg-1: rgb(221, 221, 221);
+    --clr-bg-2: rgb(245, 245, 245);
+    --clr-bg-3: rgb(255, 209, 102);
+    --clr-bg-4: rgb(240, 70, 111);
+
+    /*- DIMENSIONI GUTTER*/
+    --gutter-xs: .25rem;
+    --gutter-sm: .5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+    --gutter-xxl: 3rem;
+
+}
+
+/*╔═══════════════╗
+       COMMON
+  ╚═══════════════╝*/
+
+body{
+    font-family: 'rotobo', sans-serif;
+}
+
+
+
+.container{
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*-- color --*/
+
+.orange{
+    color: var(--clr-primary-0);
+}
+.green{
+    color: var(--clr-secondary-0);
+}
+.blue{
+    color: var(--clr-third-0);
+}
+
+/*╔═══════════════╗
+    TAG SEMANTICI
+  ╚═══════════════╝*/
+    
+.logo{
+    margin-top: 1rem;
+    color: var(--clr-txt-0);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-bg-0);
+    padding: var(--gutter-md);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+main{
+    background-color: var(--clr-bg-1);
+    min-height: calc(100vh - 142px) ;
+}
+
+.grid{
+    padding: var(--gutter-xl);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: var(--gutter-xxl);
+}
+
+.box-icon{
+    padding: var(--gutter-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-sm);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-bg-2);
+    border-radius: var(--gutter-lg);
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.4);
+
+}
+
+.box-icon i {
+    font-size: 2.5rem;
+}
